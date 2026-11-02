@@ -5,6 +5,6 @@ export class DomainError extends Error {
         this.code = code;
     }
 }
-export class ValidationError extends DomaineError {} 
+export class ValidationError extends DomainError {}
 export class NotFoundError extends DomainError {}
 export class ConflictError extends DomainError {}

@@ -1,9 +1,9 @@
-import { ValidationError } from "../errors.Js";
+import { ValidationError } from "../errors.js";
 
 const HOUR = 3600_000;
 const ISO_UTC =  /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(:\d{2}(\.\d+)?)?Z$/;
 
-export function parseUtc(value field) {
+export function parseUtc(value, field) {
     if (typeof value !== 'string' || !ISO_UTC.test(value)) {
     throw new ValidationError(`${field} doit être une date ISO 8601 en UTC (suffixe Z)`, 'invalid_date');
   }
